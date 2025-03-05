@@ -11,13 +11,13 @@ function scripts() {
 
 function styles() {
     return gulp.src('./src/styles/*.scss')
-        .pipe(imagemin())
+        .pipe(sass({ outputStyle: 'compressed' }))        
         .pipe(gulp.dest('./dist/css'));
 }
 
 function images() {
     return gulp.src('./src/images/**/*')
-        .pipe(sass({ outputStyle: 'compressed' }))
+        .pipe(imagemin())
         .pipe(gulp.dest('./dist/images'));
 }
 
