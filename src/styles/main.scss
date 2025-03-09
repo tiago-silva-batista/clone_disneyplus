@@ -1,9 +1,7 @@
 @use 'variaveis';
 @use 'hero';
 @use 'shows';
-@use 'plans';
 @use 'available-devices';
-@use 'faq';
 @use 'footer';
 @use 'header';
 
@@ -128,6 +126,11 @@ body {
     &--dark {
         background-color: rgba(variaveis.$corDeFundoBotaoDark, 0.8);
         border-color: variaveis.$corTextoSecundario;
+
+        &:hover {
+            background-color: variaveis.$corTextoSecundario;
+            border-color: variaveis.$corDeFundo;
+        }
     }
 }
 

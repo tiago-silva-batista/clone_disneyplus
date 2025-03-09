@@ -6,12 +6,16 @@
     
     &__list {
         margin-top: 44px;
-        display: grid;
+        display: none;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
 
         @media (max-width: 768px) {
             grid-template-columns: 1fr 1fr;
+        }
+
+        &--is-active {
+            display: grid;
         }
 
         &__item {
